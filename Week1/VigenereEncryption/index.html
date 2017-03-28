@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Form 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="logon-box">
+      <div class="form">
+          <div class="group">
+            <input id="pText" class="inputMaterial" type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Plain Text</label>
+          </div>
+          <div class="group">
+            <input id="keyword" class="inputMaterial" type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Keyword</label>
+          </div>
+          <div class="group">
+            <input id="result" class="inputMaterial" type="text" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Result</label>
+          </div>
+          <button id="btn" class="btn" onclick="encryption()">Encrypt</button>
+      </div>
+    </div>
+  </body>
+</html>

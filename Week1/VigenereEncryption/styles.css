@@ -1,0 +1,252 @@
+#login {
+  background-color: #1C73B8;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header-logo {
+  width: 80px;
+  padding: 10px
+}
+
+header .inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h2 {
+  margin: 0 0 0 0;
+}
+
+nav {
+  min-height: 50px;
+  background-color: #175F98;
+  color: #fff;
+}
+
+nav h2 {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.logon-box {
+  width: 100%;
+  background-color: white;
+}
+
+.logon-box .logo {
+  width: 70%;
+  padding: 15px 15%;
+}
+
+.form {
+  width: 90%;
+  padding: 5%;
+}
+
+/* Form */
+
+
+/* Box Login */
+
+.group 			  {
+  position:relative;
+  margin-bottom: 35px;
+}
+
+.inputMaterial 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  width:90%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+
+.inputMaterial:focus { outline:none;}
+
+/* label */
+
+label 				 {
+  color:#999;
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* aactive state */
+.inputMaterial:focus ~ label, .inputMaterial:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color: #175F98;
+}
+
+.btn {
+  padding: 20px;
+  width: 100%;
+  background-color: #F58026;
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #F59246;
+}
+
+
+/* End Form */
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  clear: both;
+  color: #fff;
+  background-color: #175F98;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+footer a {
+  color: #fff;
+}
+
+@media screen and (min-width:500px) {
+
+  #header-logo {
+    width: 150px;
+    padding: 10px
+  }
+
+  nav {
+    min-height: 80px;
+  }
+
+  nav h2 {
+    font-size: 25px;
+  }
+
+  .logon-box {
+    width: 300px;
+    margin-top: 3%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 10px 70px black;
+    vertical-align: middle;
+  }
+
+  #bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+
+@media screen and (min-width:1600px) {
+  .logon-box {
+    width: 400px;
+  }
+}
+
+
+
+
+/* Portal */
+
+#logout {
+  float: right;
+  color: #fff;
+  padding-right: 20px;
+}
+
+.card {
+  width: 100%;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: top;
+}
+
+.card .title {
+  color: #fff;
+  background-color: #F58026;
+  padding: 20px;
+  text-align: center;
+}
+
+.item {
+  padding: 20px;
+  color: #222;
+}
+
+.item:hover {
+  background-color: #ddd;
+}
+
+.item p {
+  padding: 0 0 0 10px;
+  margin: 0 0 0 0;
+}
+
+@media screen and (min-width:500px) {
+
+  .card {
+    box-shadow: 0px 5px 20px black;
+    float: left;
+  }
+
+  #logout {
+    float: right;
+    padding: 15px;
+    color: #fff;
+    padding-right: 40px;
+  }
+
+}
+
+@media screen and (min-width:800px) {
+
+  .container {
+    margin: 0px 50px;
+  }
+
+  .card {
+    margin-top: 10px;
+    width: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 350px;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0px 150px;
+  }
+
+  .card {
+    margin-top: 20px;
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
