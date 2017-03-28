@@ -6,8 +6,8 @@
 
 
 function encryption() {
-  var plainText = document.getElementById('pText').value;
-  var keyword = document.getElementById('keyword').value;
+  var plainText = document.getElementById('pText').value.toLowerCase();
+  var keyword = document.getElementById('keyword').value.toLowerCase();
   var encrypted = "";
   console.log(plainText);
   console.log(keyword);
