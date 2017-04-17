@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Session 4</title>
+    <script type="text/javascript" src="/angular.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="">
+      <form ng-submit="user=='admin'&&password=='123'?show=true:show=false" class="" action="index.html" method="post">
+        <label for="">username: </label>
+        <input type="text" ng-model="user" name="" value="">
+        <label for="">password: </label>
+        <input type="password" ng-model="password" name="" value="">
+        <button type="submit" name="button">Login</button>
+      </form>
+    </div>
+    <div ng-if="show">
+      <label for="">A: </label>
+      <input type="text" ng-model="a">
+      <label for="">B: </label>
+      <input type="text" ng-model="b">
+    </div>
+  </body>
+</html>
