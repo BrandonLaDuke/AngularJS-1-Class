@@ -5,12 +5,21 @@ var dictionary = ["YAP","YAH","ATE","ANT","ANTRE","ANTE","ANE","ANELE","ANY","TA
 "CHAY","CHAT","CHAP","CHANT","CHANTER","CHANTEY","CELT","LET","LENT","LEY","LYNCH","LYE","LECH",
 "LEV","YET","YEN","YENTA","YECH","YECHY","VET","EYNE","EYER","EYEN","TYNE","TYE","TECHY"];
 var matrix = [["Y", "A", "T", "R"], [" P ", "H", "N", "E"] , ["X", "C", "L", "Y"] , ["S", "V", "E", "T"] ];
+//var matrix = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "N", "O", "P", "Qu", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 //----------------------Homework Part 1----------------------
 //-----------------------------------------------------------
 //Create a boggle game using the above Dictionary and Matrix
 
-
+function shuffle() {
+  var box = 1;
+  for ( box = 1; box < 17; box++ ) {
+    var boxG = "S" + box;
+    console.log(boxG);
+    var letter = matrix[Math.floor(Math.random() * matrix.length)];
+    document.getElementById(boxG).innerHTML= letter;
+  }
+}
 
 //----------------------Homework Part 2----------------------
 //-----------------------------------------------------------
