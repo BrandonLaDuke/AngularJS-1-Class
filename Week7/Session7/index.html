@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="NewApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Sesson 7</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="main.controller.js"></script>
+    <script src="post.controller.js"></script>
+  </head>
+  <body ng-controller="MainController">
+    <label>Title: </label>
+    <input type="text" ng-model="input.title" />
+    <input type="text" ng-model="input.color" />
+    <br />
+    <label>Content: </label>
+    <textarea type="text" ng-model="input.content"></textarea>
+    <br />
+    <button ng-click="saveClicked()">Save</button>
+    <hr />
+    <div ng-controller="PostController" ng-repeat="each in outputArray track by $index" style="background-color: {{color}};">
+      <button ng-click="star()">Stared</button>
+      <h3 style="color: {{each.color}}">{{each.title}}</h3>
+      <p>{{each.content}}</p>
+      <hr />
+    </div>
+  </body>
+</html>

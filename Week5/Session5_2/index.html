@@ -8,13 +8,13 @@
     <script type="text/javascript" src="angular.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
-  <body ng-controller="FirstController">
+  <body ng-controller="FirstController as vm">
     <div class="">
-      <input ng-model="post" name="name"></input>
-      <button type="button" ng-click="postText()" name="button">Post</button>
+      <textarea ng-model="inputText" name="name"></textarea>
+      <button type="button" ng-click="save()" name="button">Post</button>
     </div>
-    <div id="thepost" class="" ng-model="thePost">
-      <h1></h1>
+    <div ng-repeat="post in posts" id="thepost" class="" ng-model="post">
+      {{post}}
     </div>
   </body>
 </html>

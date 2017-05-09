@@ -1,0 +1,15 @@
+body {
+  width:900px;
+  margin: 5em auto;
+  padding: 2em;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+label {
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+.stared {
+  box-shadow: 0px 1px 5px rgba(66, 134, 244, 0.8);
+}
