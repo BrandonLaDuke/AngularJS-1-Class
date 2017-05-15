@@ -1,15 +1,22 @@
 :root {
 
   /* Colors */
-  --toolbar-bkg-color: blue;
-  --txt-color: #ffffff;
-  --drawer-bkg-color: red;
+  --toolbar-bkg-color: lightblue;
+  --txt-color: #000000;
+  --drawer-bkg-color: #eeeeee;
+  --color-black: #000000;
+  --card-bkg: #fff;
 }
 
 body {
   display: block;
   margin: 0;
   font-family: sans-serif;
+}
+
+.bodycontainer {
+  display: flex;
+  width: 100%;
 }
 
 .toolbar {
@@ -26,14 +33,16 @@ body {
 }
 
 .drawer {
-  display: block;
+  display: inline-block;
   width:240px; height: calc(100vh - 48px);
+  padding: .5em;
   background-color: var(--drawer-bkg-color);
 }
 
 .drawer label {
   display: block;
   color: var(--txt-color);
+  margin-top: 1em;
 }
 
 .drawer input {
@@ -41,5 +50,30 @@ body {
   color: var(--txt-color);
   border: 0;
   border-bottom: 2px solid var(--toolbar-bkg-color);
+  margin-top: .5em;
   background-color: var(--drawer-bkg-color);
+}
+
+
+/* Card */
+
+.cardcontainer {
+  display: flex;
+  width: 100%;
+}
+
+.card {
+  display: block;
+  width: 500px; height: 350px;
+  margin: auto;
+  align-content: center;
+  color: var(--txt-color);
+  border: 2px solid var(--color-black);
+  background-color: var(--card-bkg);
+}
+
+/* DnD */
+
+#draggable {
+  position: relative;
 }

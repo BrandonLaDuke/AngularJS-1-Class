@@ -1,0 +1,22 @@
+:host {
+  --bkg-color: #eeeeee;
+  --txt-color: #000000;
+  --border-color: #dddddd;
+}
+
+.createPost {
+  width: 100%;
+  background-color: var(--bkg-color);
+  color: var(--txt-color);
+}
+
+.createPost input {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.createPost {
+  
+}

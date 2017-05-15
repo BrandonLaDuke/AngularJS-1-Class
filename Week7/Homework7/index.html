@@ -4,62 +4,80 @@
     <meta charset="utf-8">
     <title>Business Card Maker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js" charset="utf-8"></script>
-    <script src="main.controller.js" charset="utf-8"></script>
-
   </head>
   <body ng-controller="MainController">
     <div class="toolbar">
       <span title>Business Card Maker</span>
     </div>
+    <div class="bodycontainer">
+
+
     <div class="drawer">
       <div class="">
         <label for="first-name">First Name:</label>
-        <input type="text" name="first-name" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="first-name" value="" ng-model="input.firstname">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="last-name" value="" ng-model="input.lastname">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="logo">Logo:</label>
-        <input type="text" name="logo" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="logo" value="" ng-model="input.logo">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="bussness_name">Bussness Name:</label>
-        <input type="text" name="bussness_name" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="bussness_name" value="" ng-model="input.bussnessname">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="address">Address:</label>
-        <input type="text" name="address" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="address" value="" ng-model="input.address">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="phone">Phone:</label>
-        <input type="text" name="phone" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="phone" value="" ng-model="input.phone">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
       <div class="">
         <label for="email">Email:</label>
-        <input type="text" name="email" value="">
-        <label for="location">Loc:</label>
-        <input type="text" name="Loc" value="">
+        <input type="text" name="email" value="" ng-model="input.email">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
       </div>
+      <button type="button" name="button" ng-click="saveClicked()">Save</button>
     </div>
 
-    <div class="card">
+    <div class="cardcontainer">
+      <div class="card" ng-model="CardController" ng-repeat="each in outputArray track by $index">
+        <div id="draggable">{{each.firstname}}</div>
+        <div>{{each.lastname}}</div>
+        <div>
+          <img id="draggable" src="{{each.img}}" alt="Logo" />
+        </div>
+        <div>{{each.bussnessname}}</div>
+        <div>{{each.address}}</div>
+        <div>{{each.phone}}</div>
+        <div>{{each.email}}</div>
+      </div>
       <!-- Card 3.5 X 5  -->
     </div>
-
+    </div>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/dnd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="main.controller.js" charset="utf-8"></script>
   </body>
 </html>
