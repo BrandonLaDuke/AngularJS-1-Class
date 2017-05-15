@@ -1,1 +1,45 @@
-.
+:root {
+
+  /* Colors */
+  --toolbar-bkg-color: blue;
+  --txt-color: #ffffff;
+  --drawer-bkg-color: red;
+}
+
+body {
+  display: block;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  width:100%; height: 48px;
+  background-color: var(--toolbar-bkg-color);
+}
+
+.toolbar [title] {
+  display: inline-block;
+  margin: auto 0 auto 1em;
+  align-items: center;
+  color: var(--txt-color);
+}
+
+.drawer {
+  display: block;
+  width:240px; height: calc(100vh - 48px);
+  background-color: var(--drawer-bkg-color);
+}
+
+.drawer label {
+  display: block;
+  color: var(--txt-color);
+}
+
+.drawer input {
+  display: inline-block;
+  color: var(--txt-color);
+  border: 0;
+  border-bottom: 2px solid var(--toolbar-bkg-color);
+  background-color: var(--drawer-bkg-color);
+}
