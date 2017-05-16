@@ -55,27 +55,36 @@
         <!-- <label for="location">Loc:</label>
         <input type="text" name="Loc" value=""> -->
       </div>
+      <div class="">
+        <label for="color">Text color:</label>
+        <input type="text" name="color" value="" ng-model="input.color">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
+      </div>
+      <div class="">
+        <label for="bkg">Card background-color:</label>
+        <input type="text" name="bkg" value="" ng-model="input.bkg">
+        <!-- <label for="location">Loc:</label>
+        <input type="text" name="Loc" value=""> -->
+      </div>
       <button type="button" name="button" ng-click="saveClicked()">Save</button>
     </div>
 
     <div class="cardcontainer">
-      <div class="card" ng-model="CardController" ng-repeat="each in outputArray track by $index">
-        <div id="draggable">{{each.firstname}}</div>
-        <div>{{each.lastname}}</div>
-        <div>
-          <img id="draggable" src="{{each.img}}" alt="Logo" />
+      <div style="background-color: {{each.bkg}}; color: {{each.color}}" class="card" ng-model="CardController" ng-repeat="each in outputArray track by $index">
+        <div id="fname">{{each.firstname}}</div>
+        <div id="lname">{{each.lastname}}</div>
+        <div id="logo">
+          <img src="http://brandonladuke.com/images/logo.svg" alt="Logo" />
         </div>
-        <div>{{each.bussnessname}}</div>
-        <div>{{each.address}}</div>
-        <div>{{each.phone}}</div>
-        <div>{{each.email}}</div>
+        <div id="bussnessname">{{each.bussnessname}}</div>
+        <div id="address">{{each.address}}</div>
+        <div id="phone">{{each.phone}}</div>
+        <div id="email">{{each.email}}</div>
       </div>
       <!-- Card 3.5 X 5  -->
     </div>
     </div>
-    <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/dnd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="main.controller.js" charset="utf-8"></script>

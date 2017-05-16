@@ -3,9 +3,10 @@
   /* Colors */
   --toolbar-bkg-color: lightblue;
   --txt-color: #000000;
+  --txt-white: #fff;
   --drawer-bkg-color: #eeeeee;
   --color-black: #000000;
-  --card-bkg: #fff;
+  --card-bkg: #3636ff;
 }
 
 body {
@@ -67,13 +68,59 @@ body {
   width: 500px; height: 350px;
   margin: auto;
   align-content: center;
-  color: var(--txt-color);
+  color: var(--txt-white);
   border: 2px solid var(--color-black);
   background-color: var(--card-bkg);
 }
 
-/* DnD */
+/* Card Styles */
 
-#draggable {
-  position: relative;
+#fname {
+  margin: 79px 0 0 197px;
+  position: fixed;
+  font-size:2em;
+
+}
+
+#lname {
+  margin: 79px 0 0 325px;
+  position: fixed;
+  font-size:2em;
+
+}
+
+#logo {
+ position: fixed;
+ margin: 95px 0 0 38px;
+ width:120px; height:100px;
+
+}
+
+#bussnessname {
+
+  margin: 124px 0 0 197px;
+  position: fixed;
+  font-size:1.2em;
+}
+
+#address {
+
+  margin: 154px 0 0 197px;
+  position: fixed;
+  font-size:1.2em;
+}
+
+
+#phone {
+
+  margin: 183px 0 0 197px;
+  position: fixed;
+  font-size:1.2em;
+}
+
+#email {
+
+  margin: 212px 0 0 197px;
+  position: fixed;
+  font-size:1.2em;
 }
