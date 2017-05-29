@@ -1,1 +1,24 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="en-us" ng-app="angleNet">
+  <head>
+    <meta charset="utf-8">
+    <title>AngleNet</title>
+    <link rel="stylesheet" type="text/css" href="/css/master.css">
+    <script src="/js/angular.js" charset="utf-8"></script>
+    <script src="/js/angular-route.min.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+  <body fullbleed>
+    <nav>
+      <div class="logo">
+        <!-- AngleNet Logo -->
+      </div>
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+      </div>
+
+    </nav>
+    <main ng-view></main>
+  </body>
+</html>
