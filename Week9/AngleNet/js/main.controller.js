@@ -1,4 +1,4 @@
-angular.module("angleNet").controller("MainController", MainController);
+var angleNet = angular.module("angleNet").controller("MainController", MainController);
 
 function MainController($scope) {
   $scope.outputArray = [];
