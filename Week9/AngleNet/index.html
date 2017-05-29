@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>AngleNet</title>
-    <link rel="stylesheet" type="text/css" href="/css/master.css">
-    <script src="/js/angular.js" charset="utf-8"></script>
-    <script src="/js/angular-route.min.js" charset="utf-8"></script>
-    <script src="/js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
   </head>
-  <body fullbleed>
+  <body fullbleed ng-controller="MainController">
     <nav>
       <div class="logo">
         <!-- AngleNet Logo -->
       </div>
       <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Profile</a>
+        <a href="#/stream">Home</a>
+        <a href="#/profile">Profile</a>
       </div>
 
     </nav>
     <main ng-view></main>
+    <script src="js/angular.js" charset="utf-8"></script>
+    <script src="js/angular-route.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/main.controller.js" charset="utf-8"></script>
   </body>
 </html>

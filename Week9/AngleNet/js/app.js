@@ -1,8 +1,14 @@
-var angleNet = angular.module('angleNet', ['ngRoute']);
+var angleNet = angular.module("angleNet", ['ngRoute']);
 
 angleNet.config(['$routeProvider', function($routeProvider){
   $routeProvider
-  .when('/home', [
-    templateUrl: 'views/home.html'
+  .when('/stream', [
+    templateUrl: 'view/stream.html'
+  ])
+  .when('/profile', [
+    templateUrl: 'view/profile.html'
+
+  ]).otherwise([
+    redirectto: '/stream'
   ])
 }]);

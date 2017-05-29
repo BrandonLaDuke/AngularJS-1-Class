@@ -1,0 +1,45 @@
+<div class="write-something contain">
+  <label for="color">Text color:
+    <input type="text" name="color" value="" ng-model="input.bkg">
+  </label>
+  <label for="color">Name:
+    <input type="text" name="name" value="" ng-model="input.name">
+  </label>
+  <label for="color">Picture:
+    <input type="text" name="name" value="" ng-model="input.picture">
+  </label>
+  <textarea name="content" ng-model="input.postText"></textarea>
+  <div class="w-buttons">
+    <button type="button" name="button" ng-click="saveClicked()">Post</button>
+  </div>
+</div>
+<div class="posts contain">
+  <div class="post" ng-repeat="each in outputArray track by $index">
+    <div class="post-top" style="background-color: {{each.bkg}};">
+      <div class="profile">
+        <img src="{{each.picture}}" alt="">
+      </div>
+      <span class="name">
+        {{each.name}}
+      </span>
+      <div class="overflow">
+        :
+      </div>
+    </div>
+    <div class="post-inner">
+      <!-- Post content goes here -->
+      {{each.postText}}
+    </div>
+    <div class="post-bottom">
+      <div class="like">
+        Like
+      </div>
+      <div class="comment">
+        Comment
+      </div>
+      <div class="share">
+        Share
+      </div>
+    </div>
+  </div>
+</div>

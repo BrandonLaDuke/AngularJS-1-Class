@@ -13,6 +13,10 @@
   --post-button-hover: #ff6f00;
 }
 
+label {
+  color: #fff;
+}
+
 [fullbleed] {
   margin: 0;
   background-color: #111;
@@ -108,6 +112,22 @@
 .contain {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.write-something textarea {
+  margin-top: var(--gutter);
+  min-width:500px; min-height: 100px;
+  max-width:500px;
+}
+.ws-buttons {
+  display: flex;
+}
+
+.ws-buttons button {
+  background-color:orange;
+  border-style: none;
+  padding: var(--gutter);
+  margin: 0 0 0 auto;
 }
 
 .post {
