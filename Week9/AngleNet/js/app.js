@@ -1,15 +1,19 @@
 var angleNet = angular.module("angleNet", ['ngRoute']);
 
-angleNet.config(['$routeProvider', function($routeProvider){
+angleNet.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
+  $locationProvider.hashPrefix("");
   $routeProvider
-  .when('/stream', [
+  .when('/stream', {
     //getting an unexpected syntax error right here.
     templateUrl: 'view/stream.html'
-  ])
-  .when('/profile', [
+  })
+  .when('/profile', {
     templateUrl: 'view/profile.html'
 
-  ]).otherwise([
-    redirectto: '/stream'
-  ])
+  }).when('/about', {
+    templateUrl: 'view/about.html'
+
+  }).otherwise('/stream');
 }]);
+
+var database = firebase.database();

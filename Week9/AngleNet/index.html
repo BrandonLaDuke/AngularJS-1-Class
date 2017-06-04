@@ -13,13 +13,29 @@
       <div class="nav">
         <a href="#/stream">Home</a>
         <a href="#/profile">Profile</a>
+        <a href="#/about">About</a>
       </div>
 
     </nav>
     <main ng-view></main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB2VBm5sqwq2RrIMU2a7qG3GypE7UwSPWA",
+        authDomain: "anglenet-43aa7.firebaseapp.com",
+        databaseURL: "https://anglenet-43aa7.firebaseio.com",
+        projectId: "anglenet-43aa7",
+        storageBucket: "anglenet-43aa7.appspot.com",
+        messagingSenderId: "984622132090"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/angular.js" charset="utf-8"></script>
     <script src="js/angular-route.min.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/main.controller.js" charset="utf-8"></script>
+    <script src="js/login.controller.js" charset="utf-8"></script>
   </body>
 </html>

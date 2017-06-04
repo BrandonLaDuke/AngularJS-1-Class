@@ -89,6 +89,7 @@ label {
   color: var(--post-text-color);
   font-family: sans-serif;
   width: 235px;
+  min-height: calc(100vh - 136px - 91px);
 }
 
 #content-section .posts {
@@ -180,4 +181,30 @@ label {
 .post-bottom div:hover {
   background-color: var(--post-button-hover);
   color: var(--dark-text);
+}
+
+/* About */
+
+.ab {
+  display: flex;
+  height: calc(100vh - 91px);
+}
+
+.card {
+  color: var(--post-text-color);
+  background-color: var(--post-bkg);
+  font-family: sans-serif;
+  padding: var(--gutter);
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  flex: 1;
+}
+.card a {
+  color: lightblue;
+}
+
+.card h1, .card h2 {
+  text-align: center;
 }
