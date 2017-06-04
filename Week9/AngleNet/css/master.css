@@ -208,3 +208,16 @@ label {
 .card h1, .card h2 {
   text-align: center;
 }
+
+#editPostBox {
+  display: none;
+}
+
+.showEditPost {
+  display: none; //change to block
+  position: fixed;
+  width: 500px;
+  padding: var(--gutter);
+  background-color: var(--post-bkg);
+  margin: auto;
+}

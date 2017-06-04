@@ -11,6 +11,12 @@ function MainController($scope) {
     $scope.outputArray.push(temp);
     SavePost();
   }
+  $scope.editClicked = function() {
+    var temp = angular.copy($scope.edit);
+    $scope.edit = {name: $scope.edit.name, picture: $scope.edit.picture, postText: $scope.edit.postText, bkg: $scope.edit.bkg};
+    $scope.outputArray.push(temp);
+    EditPost();
+  }
 
   function SavePost(name, imageUrl, content, bkgColor) {
     var userId = "bjld";
@@ -27,6 +33,14 @@ function MainController($scope) {
       postText: content,
       backgroundColor: bkgColor
     });
+  }
+
+  function EditPost(name, imageURL, content, bkgColor) {
+
+  }
+
+  $scope.sendMail = function() {
+    window.open('mailto:brandon@brandonladuke.com?subject=' + $scope.mail.subject + '&body=' + $scope.mail.message + '');
   }
 
 }

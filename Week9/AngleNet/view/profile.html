@@ -75,6 +75,23 @@
       </div>
     </div>
   </div>
+    <div class="write-something showEditPost">
+      <label for="color">Text color:
+        <input type="text" name="color" value="edit.bkg" ng-model="edit.bkg">
+      </label>
+      <label for="color">Name:
+        <input type="text" name="name" value="edit.name" ng-model="edit.name">
+      </label>
+      <label for="color">Picture:
+        <input type="text" name="name" value="edit.picture" ng-model="edit.picture">
+      </label>
+      <textarea name="content" value="edit.postText" ng-model="edit.postText"></textarea>
+      <div class="w-buttons">
+        <button type="button" name="button" ng-click="saveClicked()">Save</button>
+      </div>
+    </div>
+
+
 
 
 

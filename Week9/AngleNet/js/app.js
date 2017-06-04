@@ -10,6 +10,9 @@ angleNet.config(['$routeProvider','$locationProvider', function($routeProvider, 
   .when('/profile', {
     templateUrl: 'view/profile.html'
 
+  }).when('/contact', {
+    templateUrl: 'view/contact.html'
+
   }).when('/about', {
     templateUrl: 'view/about.html'
 
