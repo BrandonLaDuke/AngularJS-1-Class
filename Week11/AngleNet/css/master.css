@@ -1,0 +1,223 @@
+:root {
+  --nav-bkg-color: blue;
+  --nav-bkg-hover: lightblue;
+  --nav-text-color: #ffffff;
+
+  --dark-text: #000000;
+  --gutter: 1em;
+
+  --post-bkg: #333333;
+  --post-text-color: #eeeeee;
+  --post-head-bkg: #039be5;
+  --post-buttons-bkg: #444444;
+  --post-button-hover: #ff6f00;
+}
+
+label {
+  color: #fff;
+}
+
+[fullbleed] {
+  margin: 0;
+  background-color: #111;
+}
+
+.nav {
+  display: flex;
+  background-color: var(--nav-bkg-color);
+}
+
+.nav a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 1.2em;
+  flex: 1;
+  color: var(--nav-text-color);
+  transition: ease all 500ms;
+}
+
+.nav a:hover {
+  background-color: var(--nav-bkg-hover);
+  color: var(--dark-text);
+}
+
+/* main content: profile*/
+
+.profile-header {
+  display: flex;
+  font-family: sans-serif;
+  background-color: var(--post-head-bkg);
+  padding: var(--gutter);
+}
+
+.profile-header .profile-picture img {
+  width:100px; height: 100px;
+  border-radius: 50%;
+}
+
+.profile-header .profile-name {
+  flex: auto;
+  align-content: center;
+  margin: auto auto auto var(--gutter);
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.profile-header .follow-button {
+  align-content: center;
+  margin: auto;
+  margin-right: calc(var(--gutter) * 2);
+  padding: var(--gutter);
+  font-weight: 500;
+  background-color: #eee;
+  color: var(--dark-text);
+}
+
+.profile-header .follow-button:hover {
+  background-color: orange;
+}
+
+#content-section {
+  display: flex;
+}
+
+#content-section aside {
+  background-color: var(--post-head-bkg);
+  padding: var(--gutter);
+  color: var(--post-text-color);
+  font-family: sans-serif;
+  width: 235px;
+  min-height: calc(100vh - 136px - 91px);
+}
+
+#content-section .posts {
+  flex: 3;
+}
+
+.followers h6, .followers h2 {
+  margin: 0;
+}
+
+.followers h6 {
+  margin-bottom: var(--gutter);
+}
+
+.followers-grid img {
+  width: 75px; height: 75px;
+}
+
+/* main content: posts */
+
+.contain {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.write-something textarea {
+  margin-top: var(--gutter);
+  min-width:500px; min-height: 100px;
+  max-width:500px;
+}
+.ws-buttons {
+  display: flex;
+}
+
+.ws-buttons button {
+  background-color:orange;
+  border-style: none;
+  padding: var(--gutter);
+  margin: 0 0 0 auto;
+}
+
+.post {
+  margin-top: var(--gutter);
+  background-color: var(--post-bkg);
+  color: var(--post-text-color);
+}
+
+.post-top {
+  display: flex;
+  padding: var(--gutter);
+  background-color: var(--post-head-bkg);
+}
+
+.post-top span {
+  flex: auto;
+  margin: auto 0 auto var(--gutter);
+  vertical-align: middle;
+  align-content: center;
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+.post-top .profile img {
+  border-radius: 50%;
+  width: 50px; height: 50px;
+}
+
+.post-inner {
+  padding: var(--gutter);
+  font-family: sans-serif;
+  line-height: 1.5em;
+}
+
+.post-bottom {
+  display: flex;
+}
+
+.post-bottom div {
+  flex: 1;
+  background-color: var(--post-buttons-bkg);
+  color: var(--post-text-color);
+  padding: var(--gutter);
+  text-align: center;
+  font-family: sans-serif;
+  cursor: hand;
+  transition: ease all 500ms;
+}
+
+.post-bottom div:hover {
+  background-color: var(--post-button-hover);
+  color: var(--dark-text);
+}
+
+/* About */
+
+.ab {
+  display: flex;
+  height: calc(100vh - 91px);
+}
+
+.card {
+  color: var(--post-text-color);
+  background-color: var(--post-bkg);
+  font-family: sans-serif;
+  padding: var(--gutter);
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  flex: 1;
+}
+.card a {
+  color: lightblue;
+}
+
+.card h1, .card h2 {
+  text-align: center;
+}
+
+#editPostBox {
+  display: none;
+}
+
+.showEditPost {
+  display: none; //change to block
+  position: fixed;
+  width: 500px;
+  padding: var(--gutter);
+  background-color: var(--post-bkg);
+  margin: auto;
+}
