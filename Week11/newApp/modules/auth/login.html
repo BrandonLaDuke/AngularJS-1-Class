@@ -1,0 +1,26 @@
+<div layout="column" flex layout-padding ng-cloak>
+
+	<br/>
+	<md-content flex class="md-no-momentum"  layout="column" layout-align="center center">
+		<md-input-container class="md-icon-float md-block">
+			<!-- Use floating label instead of placeholder -->
+			<label>Usename</label>
+			<md-icon md-font-icon="zmdi zmdi-account-o" class="name"></md-icon>
+			<input ng-model="vm.user.username" type="text">
+		</md-input-container>
+		<md-input-container class="md-icon-float md-block">
+			<!-- Use floating label instead of placeholder -->
+			<label>Password</label>
+			<md-icon md-font-icon="zmdi zmdi-lock" class="name"></md-icon>
+			<input ng-model="vm.user.password" type="password">
+		</md-input-container>
+		<div  flex layout="row">
+	<md-button class=" md-raised">Cancel
+		</md-button>
+		<md-button class="md-accent md-raised" ng-click="vm.login($event)">Login	
+		</md-button>
+	</div>
+
+	</md-content>
+
+</div>

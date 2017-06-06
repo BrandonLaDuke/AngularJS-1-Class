@@ -1,0 +1,62 @@
+<html ng-app="NewApp">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-messages.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css"
+		rel="stylesheet">
+
+		<script src="app.js"></script>
+
+		<script src="modules/auth/auth.service.js"></script>
+		<script src="modules/posts/post.service.js"></script>
+
+		<script src="main.controller.js"></script>
+		<script src="modules/auth/signup.controller.js"></script>
+		<script src="modules/auth/login.controller.js" charset="utf-8"></script>
+		<script src="modules/posts/home.controller.js"></script>
+		<script src="modules/posts/profile.controller.js"></script>
+	</head>
+	<body ng-controller="MainController">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<md-icon md-font-icon="zmdi zmdi-facebook"></md-icon>
+				<md-input-container>
+					<label>Search</label>
+					<input ng-model="user.title">
+				</md-input-container>
+				<md-icon md-font-icon="zmdi zmdi-search"></md-icon>
+				<span flex></span>
+				<md-button href="#/profile">
+					<img ng-src="https://cdn.37img.com/global/5a78199438ba8554c0e728edc8b6e2000010/avatar.96.gif" class="md-avatar" style="width:20px;height:20px;border-radius:50%" />
+					Babak
+				</md-button>
+				<md-button class="md-icon-button" href="#/home">
+					<md-icon md-font-icon="zmdi zmdi-home">
+					</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<div style="height:100%;overflow:hidden">
+
+
+			<div ng-view style="height:100%;overflow:scroll">
+			</div>
+			<div style="position:absolute;width:100%;height:50px;background:lightgrey;bottom:0px">
+				<span>Footer</span>
+			</div>
+
+		</div>
+
+
+
+
+
+	</body>
+
+</html>
