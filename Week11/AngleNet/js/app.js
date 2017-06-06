@@ -16,7 +16,11 @@ angleNet.config(['$routeProvider','$locationProvider', function($routeProvider, 
   }).when('/about', {
     templateUrl: 'view/about.html'
 
+  }).when('/signup', {
+    templateUrl: 'view/signup.html'
+    
+  }).when('/login', {
+    templateUrl: 'view/login.html'
+
   }).otherwise('/stream');
 }]);
-
-var database = firebase.database();

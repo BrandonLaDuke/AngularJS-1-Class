@@ -1,46 +1,44 @@
 var angleNet = angular.module("angleNet").controller("MainController", MainController);
+var userId = "bjld";
+var postRef = firebase.database().ref('users/' + userId + '/post');
+console.log(postRef);
 
-function MainController($scope) {
-  $scope.outputArray = [];
-  $scope.input = {name:"Brandon LaDuke", picture:"http://brandonladuke.com/images/Me.jpg", postText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", bkg:"var(--post-head-bkg)"};
-  $scope.contentInput = "";
+function MainController($scope, $timeout, Auth, Post) {
+  var vm = this;
+  vm.name = Auth.name;
+  console.log('main-controller');
 
+  Post.getRes()
+	.then(function successCallback(res) {
 
-  $scope.saveClicked = function() {
-    var temp = angular.copy($scope.input);
-    $scope.outputArray.push(temp);
-    SavePost();
-  }
-  $scope.editClicked = function() {
-    var temp = angular.copy($scope.edit);
-    $scope.edit = {name: $scope.edit.name, picture: $scope.edit.picture, postText: $scope.edit.postText, bkg: $scope.edit.bkg};
-    $scope.outputArray.push(temp);
-    EditPost();
-  }
+		// this callback will be called when we get a successful response (HTTP status 200s: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes )
+		console.log("We just got the succesful response back!");
+		console.log(res);
+		vm.res = res.data;
 
-  function SavePost(name, imageUrl, content, bkgColor) {
-    var userId = "bjld";
-    var name = $scope.input.name;
-    var imageUrl = $scope.input.picture;
-    var content = $scope.input.postText;
-    var bkgColor = $scope.input.bkg;
-    console.log(name);
-    console.log(imageUrl);
-    var newPostKey = firebase.database().ref().child('posts').push().key;
-    firebase.database().ref('users/' + userId + '/post' + newPostKey).set({
-      username: name,
-      profile_picture: imageUrl,
-      postText: content,
-      backgroundColor: bkgColor
-    });
-  }
+	}, function errorCallback(res) {
 
-  function EditPost(name, imageURL, content, bkgColor) {
+		// this callback will be called when we get a problematic response (HTTP status 400s and 500s)
+		console.log("There was a problem with res");
+		console.log(res);
 
-  }
+	});
+	var payload = {
+		data: "Hello!"
+	};
+	Post.echo(payload).then(function success(res) {
+		console.log(res.data)
+	}, function error(res) {
+		console.log(res)
+	});
 
-  $scope.sendMail = function() {
-    window.open('mailto:brandon@brandonladuke.com?subject=' + $scope.mail.subject + '&body=' + $scope.mail.message + '');
-  }
+	Post.helpApi()
+	.then(function successCallback(res) {
+		console.log(res.data);
+	});
+
+	//This is undefined because we don't have the response yet!
+	//Javascript is running all the lines after each other, except for the http promise (then function) which is happenning upon getting any response back from the server.
+	console.log("This is running lexically after function getRes from Post service", vm.res);
 
 }
