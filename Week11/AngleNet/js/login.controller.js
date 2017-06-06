@@ -11,5 +11,6 @@ function LoginController($scope) {
       console.log("User attempted: " + $scope.loginF.userAtempt);
     }
     console.log(userId);
+    console.log(login);
   }
 }
