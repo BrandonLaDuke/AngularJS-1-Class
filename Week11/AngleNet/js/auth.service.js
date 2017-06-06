@@ -6,4 +6,8 @@ function Auth() {
 
 	vm.name = "ブランドン";
 
+  vm.signup = function(userInfo) {
+    console.log("Auth Signup", userInfo);
+    $http.post('http://mydailypanel.com:8383/api/signup', userInfo);
+  }
 }

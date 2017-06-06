@@ -17,8 +17,9 @@ angleNet.config(['$routeProvider','$locationProvider', function($routeProvider, 
     templateUrl: 'view/about.html'
 
   }).when('/signup', {
-    templateUrl: 'view/signup.html'
-    
+    templateUrl: 'view/signup.html',
+    controller: "signupController"
+
   }).when('/login', {
     templateUrl: 'view/login.html'
 
