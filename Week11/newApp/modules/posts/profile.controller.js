@@ -14,10 +14,10 @@ function ProfileController($scope, $log, Auth, Post){
 
 
 	$scope.$on("$destroy",function(){
-		
+
 		console.log("I'm getting killed helllllppppppp!")
-		
+
 	});
-	
-	
+
+
 }

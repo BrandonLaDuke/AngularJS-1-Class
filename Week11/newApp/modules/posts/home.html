@@ -1,5 +1,41 @@
-<h1>This is {{vm.name}}'s home page {{vm.number}}</h1>
-<h1>This is comming from service {{vm.secondNumber}}</h1>
-<div>
-{{vm.res}}
+<link rel="stylesheet" href="/css/master.css">
+<div class="write-something contain">
+  <form ng-submit="vm.post(post)">
+		<input type=text ng-model="post.title" />
+		<textarea ng-model="post.description"></textarea>
+		<button type="submit">Save</button>
+	</form>
+
+</div>
+<div class="posts contain">
+  <div class="post" ng-repeat="post in vm.posts">
+    <div class="post-top" style="background-color: {{each.bkg}};">
+      <div class="profile">
+        <img src="{{post.creator.image}}" alt="">
+      </div>
+      <span class="name">
+        {{post.creator.name}}
+      </span>
+      <div class="overflow">
+        {{post.date|date:'medium'}}
+      </div>
+    </div>
+    <div class="post-inner">
+      <!-- Post content goes here -->
+      <h2>{{post.title}}</h2>
+
+      {{post.description}}
+    </div>
+    <div class="post-bottom">
+      <div class="like">
+        Like
+      </div>
+      <div class="comment">
+        Comment
+      </div>
+      <div class="share">
+        Share
+      </div>
+    </div>
+  </div>
 </div>

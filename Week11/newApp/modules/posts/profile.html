@@ -1,19 +1,73 @@
-<h1>This is {{vm.name}}'s profile Page  {{vm.number}}</h1>
-<div>
-	<form ng-submit="vm.post(post)">
-		<input type=text ng-model="post.title" />
-		<textarea ng-model="post.description"></textarea>
-		<button type="submit">Save</button>
-	</form>
+<link rel="stylesheet" href="/css/master.css">
+<div class="profile-header">
+  <div class="profile-picture">
+    <img src="http://brandonladuke.com/images/Me.jpg" alt="">
+  </div>
+  <span class="profile-name">
+    Brandon LaDuke
+  </span>
+  <div class="follow-button">
+    Follow
+  </div>
 </div>
+<section id="content-section">
+  <aside class="about">
+    <div class="bio">
+      <h2>Bio</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+    <div class="followers">
+      <h2>741 Followers</h2>
+      <h6>View All...</h6>
+      <div class="followers-grid">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/16406611_1520108171362479_6984068782632757708_n.jpg?oh=a0bd3e4b87ac5cf6a96df07b9953b03e&oe=59AC71D9" alt="Brandi Torres">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/15940746_1430375486986216_9008468065814116353_n.jpg?oh=64386238dd87a11f6c0b8b74a7caddd8&oe=59B93BB7" alt=" Robbie Valdez">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/12391041_933278290084505_6956765606228843859_n.jpg?oh=2e673a255f013e1c1c5d2a2c5eb90a59&oe=59E40DB6" alt="Victoria">
+      </div>
+    </div>
+  </aside>
+  <div class="posts">
+		<div class="write-something contain">
+		  <form ng-submit="vm.post(post)">
+				<input type=text ng-model="post.title" />
+				<textarea ng-model="post.description"></textarea>
+				<button type="submit">Save</button>
+			</form>
 
-<div style="color:{{vm.color}}">
-	<div ng-repeat="post in vm.posts track by $index">
-		<h4>
-			{{post.title}}
-		</h4>
-		<p>
-			{{post.description}}
-		</p>
-	</div>
-</div>
+		</div>
+		<div class="posts contain">
+		  <div class="post" ng-repeat="post in vm.posts">
+		    <div class="post-top" style="background-color: {{each.bkg}};">
+		      <div class="profile">
+		        <img src="{{post.creator.image}}" alt="">
+		      </div>
+		      <span class="name">
+		        {{post.creator.name}}
+		      </span>
+		      <div class="overflow">
+		        {{post.date|date:'medium'}}
+		      </div>
+		    </div>
+		    <div class="post-inner">
+		      <!-- Post content goes here -->
+		      <h2>{{post.title}}</h2>
+
+		      {{post.description}}
+		    </div>
+		    <div class="post-bottom">
+		      <div class="like">
+		        Like
+		      </div>
+		      <div class="comment">
+		        Comment
+		      </div>
+		      <div class="share">
+		        Share
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+  </div>
+  </div>
+</section>
